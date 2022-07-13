@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans&family=Press+Start+2P&family=Raleway:wght@300;400;700;800&family=Roboto:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: "Roboto", "Bebas Neue", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: rgb(208, 2, 2);
+  background: linear-gradient(
+    137deg,
+    rgba(208, 2, 2, 1) 15%,
+    rgba(255, 128, 0, 1) 47%,
+    rgba(20, 0, 177, 1) 79%
+  );
+}
+
+.search {
+  position: relative;
+}
+
+.input_text {
+  background-color: rgb(255, 255, 255);
+  border: 0;
+  outline: 0;
+  padding: 1rem;
+  height: 50px;
+  width: 50px;
+  font-size: 1rem;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  transition: width 300ms ease;
+}
+
+.btn {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.5rem;
+  transition: all 300ms;
+}
+/* Beim hinzufügen von der active Klasse durch klicken vergrößert sich das Inputfeld  */
+.search.active .input_text {
+  width: 200px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+.search.active .btn {
+  transform: translateX(200px);
+  border-radius: 0px 15px 15px 0px;
+}
